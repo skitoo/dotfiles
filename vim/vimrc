@@ -1,0 +1,109 @@
+" Vim configuration
+" Author : Alexis Couronne - http://skitoo.net
+
+"-----------------------------------------------------------------------------------------------
+call plug#begin('~/.vim/plugged')
+
+" indispensables plugins
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-surround'
+Plug 'majutsushi/tagbar'
+Plug 'mattn/emmet-vim'
+Plug 'scrooloose/nerdcommenter'
+
+" themes
+Plug 'flazz/vim-colorschemes'
+
+" languages
+Plug 'klen/python-mode'
+Plug 'sirtaj/vim-openscad'
+Plug 'ElmCast/elm-vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+call plug#end()
+
+"-----------------------------------------------------------------------------------------------
+" general config
+"
+
+set title
+set number
+set ruler
+set wrap
+set cursorline
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" disable swap files
+set noswapfile
+set hidden
+
+colorscheme Monokai
+
+
+filetype on
+filetype plugin on
+filetype indent on
+
+let mapleader = ","
+
+"-----------------------------------------------------------------------------------------------
+"pluggins config
+"
+
+" vim-airline config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'badwolf'
+
+" nerdtree config
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+autocmd StdinReadPre * let s:std_in = 1
+
+" vim-jsx config
+let g:jsx_ext_required = 0  " enable jsx in .js files
+
+" syntastic config
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_enable_javascript_checker = 1
+let g:syntastic_javascript_checkers = ['eslint']
+
+" ctrlp config
+set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip,*.pyc,*.pyo
+
+" vim-fugitive config
+set statusline+=%{fugitive#statusline()}
+
+"-----------------------------------------------------------------------------------------------
+" Mapping
+"
+nmap <C-s> :write<CR>
+nmap <F2> :TagbarToggle<CR>
+nmap <F3> :NERDTreeToggle<CR>
+
+"" buffers
+"nmap <silent> <C-Left> :bn<CR>
+"nmap <silent> <C-Right> :bp<CR>
+
+"" windows
+"nmap <A-Up> :wincmd k<CR>
+"nmap <A-Down> :wincmd j<CR>
+"nnoremap <A-Left> :wincmd h<CR>
+"nnoremap <A-Right> :wincmd l<CR>
