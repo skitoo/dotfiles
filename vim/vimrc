@@ -4,23 +4,23 @@
 "-----------------------------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
-" indispensables plugins
+" Indispensables plugins
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
-Plug 'scrooloose/nerdcommenter'
 
-" themes
+" Themes
 Plug 'flazz/vim-colorschemes'
 
-" languages
+" Languages
 Plug 'klen/python-mode'
 Plug 'sirtaj/vim-openscad'
 Plug 'ElmCast/elm-vim'
@@ -31,49 +31,66 @@ Plug 'mxw/vim-jsx'
 call plug#end()
 
 "-----------------------------------------------------------------------------------------------
-" general config
+" General config
 "
 
+" Show the filename in the window titlebar
 set title
+
+" Enable line numbers
 set number
+
+" Show the cursor position
 set ruler
-set wrap
+
+" Do not wrap long lines
+set nowrap
+
+" Highlight current line
 set cursorline
 
+" Make tabs as wide as four spaces
 set tabstop=4
+
+" Autoindent to four spaces
 set shiftwidth=4
+
+" Hitting Tab in insert mode will produce the appropriate number of spaces
 set expandtab
 
-" disable swap files
+" Disable swap files
 set noswapfile
+
+" The current buffer can be put to the background without writing to disk
 set hidden
 
+" Show invisible characters
+set lcs=tab:▸\ ,trail:·,nbsp:_
+set list
+
+" Set colorscheme
 colorscheme Monokai
 
-
-filetype on
-filetype plugin on
-filetype indent on
-
-let mapleader = ","
+" Turn on file type detection
+filetype plugin indent on
 
 "-----------------------------------------------------------------------------------------------
-"pluggins config
+" Pluggins config
 "
 
-" vim-airline config
+" Vim-airline config
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
 
-" nerdtree config
+" Nerdtree config
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 autocmd StdinReadPre * let s:std_in = 1
 
-" vim-jsx config
+" Vim-jsx config
 let g:jsx_ext_required = 0  " enable jsx in .js files
 
-" syntastic config
+" Syntastic config
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -85,15 +102,18 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_javascript_checker = 1
 let g:syntastic_javascript_checkers = ['eslint']
 
-" ctrlp config
+" Ctrlp config
 set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip,*.pyc,*.pyo
 
-" vim-fugitive config
+" Vim-fugitive config
 set statusline+=%{fugitive#statusline()}
 
 "-----------------------------------------------------------------------------------------------
 " Mapping
 "
+
+let mapleader = ","
+
 nmap <C-s> :write<CR>
 nmap <F2> :TagbarToggle<CR>
 nmap <F3> :NERDTreeToggle<CR>
