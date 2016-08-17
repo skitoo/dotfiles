@@ -74,6 +74,11 @@ colorscheme Monokai
 " Turn on file type detection
 filetype plugin indent on
 
+" Guideline position
+set colorcolumn=81
+autocmd FileType javascript set colorcolumn=101
+
+
 "-----------------------------------------------------------------------------------------------
 " Pluggins config
 "
