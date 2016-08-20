@@ -180,15 +180,21 @@ set statusline+=%{fugitive#statusline()}
 let mapleader = ","
 
 nmap <C-s> :write<CR>
-nmap <F2> :TagbarToggle<CR>
-nmap <F3> :NERDTreeToggle<CR>
+nmap <C-q> :quit<CR>
+map <F2> :TagbarToggle<CR>
+map <F3> :NERDTreeToggle<CR>
+
+vmap <leader><F5> :sort<CR>
+nmap <leader><F9> :so $MYVIMRC<CR>:AirlineRefresh<CR>
+nmap <leader><F10> :PlugUpdate<CR>
 
 "" buffers
-"nmap <silent> <C-Left> :bn<CR>
-"nmap <silent> <C-Right> :bp<CR>
+nmap <leader>n  :bn<CR>
+nmap <leader>b :bp<CR>
 
 "" windows
-"nmap <A-Up> :wincmd k<CR>
-"nmap <A-Down> :wincmd j<CR>
-"nnoremap <A-Left> :wincmd h<CR>
-"nnoremap <A-Right> :wincmd l<CR>
+nmap <leader>k :wincmd k<CR>
+nmap <leader>j :wincmd j<CR>
+nmap <leader>h :wincmd h<CR>
+nmap <leader>l :wincmd l<CR>
+
