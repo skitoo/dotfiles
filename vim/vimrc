@@ -16,6 +16,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
+Plug 'Townk/vim-autoclose'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -129,6 +131,17 @@ let g:airline_theme = 'badwolf'
 " Nerdtree config
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
 autocmd StdinReadPre * let s:std_in = 1
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
 
 " Nerdcommenter config
 let g:NERDSpaceDelims = 1
