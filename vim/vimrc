@@ -1,7 +1,7 @@
 " Vim configuration
 " Author : Alexis Couronne - http://skitoo.net
 
-"-----------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
 
 " Indispensables plugins
@@ -130,6 +130,7 @@ let g:airline_theme = 'badwolf'
 
 " Nerdtree config
 let NERDTreeIgnore = ['\.pyc$', '\.pyo$']
+let NERDTreeShowHidden = 1
 autocmd StdinReadPre * let s:std_in = 1
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
@@ -172,7 +173,7 @@ set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip,*.pyc,*.pyo
 " Vim-fugitive config
 set statusline+=%{fugitive#statusline()}
 
-"-----------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------
 " Mapping
 "
 
