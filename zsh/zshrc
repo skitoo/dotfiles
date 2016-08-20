@@ -24,6 +24,8 @@ ZSH_THEME_CLOUD_PREFIX='★'
 PROMPT='%{$fg_bold[red]%}$ZSH_THEME_CLOUD_PREFIX %{$fg_bold[green]%}%p %{$fg[green]%}%c %{$fg_bold[cyan]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
 
 # Shell aliases
+alias reload!='source ~/.zshrc'
+
 alias ls='ls --color'
 alias l='ls -la'
 alias ll='ls -l'
