@@ -73,6 +73,9 @@ set cindent
 " Disable swap files
 set noswapfile
 
+" Disable backup files
+set nobackup
+
 " The current buffer can be put to the background without writing to disk
 set hidden
 
