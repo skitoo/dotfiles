@@ -97,9 +97,6 @@ hi NonText ctermfg=59 ctermbg=none
 " Turn on file type detection
 filetype plugin indent on
 
-" Guideline position
-set colorcolumn=81
-
 " Disable arrow keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -118,6 +115,10 @@ inoremap <right> <nop>
 " Javascript
 autocmd FileType javascript set colorcolumn=101
 autocmd FileType javascript.jsx setlocal sts=2 sw=2 ts=2
+
+" Python
+autocmd FileType python set colorcolumn=81
+autocmd FileType python setlocal sts=4 sw=4 ts=4
 
 "-------------------------------------------------------------------------------
 " Pluggins config
