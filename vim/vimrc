@@ -86,6 +86,10 @@ set list
 " Set colorscheme
 colorscheme Monokai
 
+" Allow transparency
+hi Normal ctermfg=252 ctermbg=none
+hi NonText ctermfg=59 ctermbg=none
+
 " Turn on file type detection
 filetype plugin indent on
 
