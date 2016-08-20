@@ -42,6 +42,12 @@ alias fig='docker-compose'
 alias localip='hostname -i'
 alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+alias ta='tmux attach'
+alias tls='tmux ls'
+alias tat='tmux attach -t'
+alias tns='tmux new-session -s'
+
 # Custom exports
 if [ -f /usr/bin/nvim ]; then
   export EDITOR='/usr/bin/nvim'
