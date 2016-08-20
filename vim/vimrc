@@ -109,7 +109,15 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 
 
-"-----------------------------------------------------------------------------------------------
+" ------------------------------------------------------------------------------
+" Specific language configs
+"
+
+" Javascript
+autocmd FileType javascript set colorcolumn=101
+autocmd FileType javascript.jsx setlocal sts=2 sw=2 ts=2
+
+"-------------------------------------------------------------------------------
 " Pluggins config
 "
 
