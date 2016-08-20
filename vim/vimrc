@@ -27,10 +27,12 @@ Plug 'ElmCast/elm-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'fatih/vim-go'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
-"-----------------------------------------------------------------------------------------------
+"-------------------------------------------------------------------------------
 " General config
 "
 
