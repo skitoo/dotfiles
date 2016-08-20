@@ -27,6 +27,10 @@ alias la='ls -a'
 
 alias tree='tree -C'
 
+alias grep='grep --color=auto'
+alias df='df -h'
+alias du='du -h -c'
+
 alias vi='nvim'
 alias vim='nvim'
 
