@@ -50,13 +50,25 @@ set nowrap
 set cursorline
 
 " Make tabs as wide as four spaces
-set tabstop=4
+set tabstop=2
 
 " Autoindent to four spaces
-set shiftwidth=4
+set shiftwidth=2
+
+" A soft-tab of four spaces
+set softtabstop=2
 
 " Hitting Tab in insert mode will produce the appropriate number of spaces
 set expandtab
+
+" Allow autoindent
+set autoindent
+
+" Allow smartindent
+set smartindent
+
+" Allow cindent
+set cindent
 
 " Disable swap files
 set noswapfile
