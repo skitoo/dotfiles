@@ -97,17 +97,26 @@ end
 
 -- {{{ Menu
 -- Create a laucher widget and a main menu
-myawesomemenu = {
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
+web_menu = {
+   { "chromium", "chromium" },
+   { "thunderbird", "thunderbird" },
+   { "xchat", "xchat" },
+   { "slack", "slack" },
+   { "starleaf", "starleaf-breeze" }
+}
+
+system_menu = {
+   { "terminal", terminal },
    { "restart", awesome.restart },
    { "quit", awesome.quit }
 }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
-                                  }
-                        })
+mymainmenu = awful.menu({
+  items = {
+    { "web", web_menu, beautiful.awesome_icon },
+    { "system", system_menu, beautiful.awesome_icon }
+  }
+})
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
