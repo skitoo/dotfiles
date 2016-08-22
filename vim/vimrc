@@ -97,6 +97,9 @@ hi NonText ctermfg=59 ctermbg=none
 " Turn on file type detection
 filetype plugin indent on
 
+" Check external changes
+au FocusGained,BufEnter * :silent! checktime
+
 " Disable arrow keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
