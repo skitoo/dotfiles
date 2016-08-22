@@ -48,6 +48,7 @@ beautiful.init(home_directory .. "/.config/awesome/themes/skitoo/theme.lua")
 terminal = "gnome-terminal"
 editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
+filemanager = "nautilus"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -111,6 +112,7 @@ web_menu = {
 
 system_menu = {
    { "terminal", terminal },
+   { "filemanager", filemanager},
    { "restart", awesome.restart },
    { "quit", awesome.quit }
 }
@@ -267,6 +269,7 @@ globalkeys = awful.util.table.join(
 
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
+    awful.key({ modkey, "Shift"   }, "Return", function () awful.util.spawn(filemanager) end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
