@@ -18,6 +18,7 @@ Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'Townk/vim-autoclose'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 
 " Themes
 Plug 'flazz/vim-colorschemes'
