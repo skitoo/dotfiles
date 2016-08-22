@@ -292,7 +292,20 @@ globalkeys = awful.util.table.join(
                   awful.util.getdir("cache") .. "/history_eval")
               end),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end)
+    awful.key({ modkey }, "p", function() menubar.show() end),
+
+    -- Audio (need alsa-utils and alsa-oss packages)
+    awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer -D pulse sset Master 5%-") end),
+    awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer -D pulse sset Master 5%+") end),
+    awful.key({ }, "XF86AudioMute",        function () awful.util.spawn("amixer -D pulse sset Master toggle") end),
+    awful.key({ }, "XF86AudioMicMute",     function () awful.util.spawn("amixer -D pulse sset Mic toggle") end),
+
+        -- Brightness (apt-get install xbacklight)
+    awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -dec 15") end),
+    awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight -inc 15") end),
+ 
+    -- Screenshot (need scrot package)
+    awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/Pictures/screenshots/ 2>/dev/null'") end)
 )
 
 clientkeys = awful.util.table.join(
