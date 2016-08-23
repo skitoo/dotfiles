@@ -40,6 +40,9 @@ do
 end
 -- }}}
 
+-- enable transparency
+awful.util.spawn_with_shell("cairo-compmgr &")
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(home_directory .. "/.config/awesome/themes/skitoo/theme.lua")
