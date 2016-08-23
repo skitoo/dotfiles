@@ -88,6 +88,9 @@ set hidden
 set lcs=tab:▸\ ,trail:·,nbsp:_
 set list
 
+" Enable yank/cut/paste from clipboard
+set clipboard+=unnamedplus
+
 " Set colorscheme
 colorscheme Monokai
 
