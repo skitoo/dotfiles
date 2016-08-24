@@ -32,6 +32,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install'}
 
 call plug#end()
 
