@@ -43,6 +43,9 @@ end
 -- enable transparency
 awful.util.spawn_with_shell("compton &")
 
+-- enable screen lock
+awful.util.spawn_with_shell("xscreensaver -no-splash")
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(home_directory .. "/.config/awesome/themes/skitoo/theme.lua")
@@ -313,6 +316,8 @@ globalkeys = awful.util.table.join(
     -- Screenshot (need scrot package)
     awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/Pictures/screenshots/ 2>/dev/null'") end),
 
+    -- Lock the screen (need xscreenpackage)
+    awful.key({ modkey }, "l", function () awful.util.spawn("xscreensaver-command -lock") end)
 )
 
 clientkeys = awful.util.table.join(
