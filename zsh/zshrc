@@ -26,7 +26,7 @@ PROMPT='%{$fg_bold[red]%}$ZSH_THEME_CLOUD_PREFIX %{$fg_bold[green]%}%p %{$fg[gre
 # Shell aliases
 alias reload!='source ~/.zshrc'
 
-alias ls='ls --color'
+alias ls='ls -h --color'
 alias l='ls -la'
 alias ll='ls -l'
 alias la='ls -a'
