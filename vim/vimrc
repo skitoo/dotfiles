@@ -91,6 +91,9 @@ set list
 " Enable yank/cut/paste from clipboard
 set clipboard+=unnamedplus
 
+" Disable folding
+set nofoldenable
+
 " Set colorscheme
 colorscheme Monokai
 
