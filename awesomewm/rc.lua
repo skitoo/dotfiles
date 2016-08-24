@@ -41,7 +41,7 @@ end
 -- }}}
 
 -- enable transparency
-awful.util.spawn_with_shell("cairo-compmgr &")
+awful.util.spawn_with_shell("compton &")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
