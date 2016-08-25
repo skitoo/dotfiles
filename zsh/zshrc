@@ -31,6 +31,10 @@ alias l='ls -la'
 alias ll='ls -l'
 alias la='ls -a'
 
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
 alias tree='tree -C'
 
 alias grep='grep --color=auto'
