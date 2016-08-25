@@ -109,7 +109,7 @@ end
 -- {{{ Menu
 -- Create a laucher widget and a main menu
 web_menu = {
-   { "chromium", "chromium" },
+   { "firefox", "firefox" },
    { "thunderbird", "thunderbird" },
    { "xchat", "xchat" },
    { "slack", "slack" },
