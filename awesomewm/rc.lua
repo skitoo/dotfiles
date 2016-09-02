@@ -94,8 +94,8 @@ end
 tags = {
   names = { 
     "★ Terminal",
-    "❉ Web",
     "☠ Code",
+    "❉ Web",
     "☯ Messaging",
     "♫ Music"
   }
