@@ -19,6 +19,8 @@ Plug 'mattn/emmet-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'ryanoasis/vim-devicons' " Need https://github.com/ryanoasis/nerd-fonts
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -98,6 +100,9 @@ set nofoldenable
 
 " Set colorscheme
 colorscheme Monokai
+
+" Set guifont
+set guifont=DroidSansMonoForPowerline\ Nerd\ Font\ Regular\ 11
 
 " Allow transparency
 hi Normal ctermfg=252 ctermbg=none
@@ -185,6 +190,21 @@ set wildignore+=*/tmp/*,*/node_modules/*,*/dist/*,*.so,*.swp,*.zip,*.pyc,*.pyo
 
 " Vim-fugitive config
 set statusline+=%{fugitive#statusline()}
+
+" Vim-devicons
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+if exists("g:loaded_webdevicons")
+  call webdevicons#refresh()
+endif
+augroup devicons
+  autocmd!
+  autocmd FileType nerdtree setlocal nolist
+  autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal containedin=ALL
+  autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
+  autocmd FileType nerdtree setlocal conceallevel=3
+  autocmd FileType nerdtree setlocal concealcursor=nvic
+augroup END
 
 "-------------------------------------------------------------------------------
 " Mapping
