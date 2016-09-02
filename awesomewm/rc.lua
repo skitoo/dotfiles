@@ -1,3 +1,8 @@
+-- Awesome configuration
+-- Author : Alexis Couronne - http://skitoo.net
+
+
+-------------------------------------------------------------------------------
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -11,11 +16,14 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
--- define home directory
+
+-------------------------------------------------------------------------------
+-- Define home directory
 home_directory = os.getenv("HOME")
 
 
--- {{{ Error handling
+-------------------------------------------------------------------------------
+-- Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
@@ -24,6 +32,8 @@ if awesome.startup_errors then
                      text = awesome.startup_errors })
 end
 
+
+-------------------------------------------------------------------------------
 -- Handle runtime errors after startup
 do
     local in_error = false
@@ -38,7 +48,10 @@ do
         in_error = false
     end)
 end
--- }}}
+
+-------------------------------------------------------------------------------
+-- launch on start
+--
 
 -- enable transparency
 awful.util.spawn_with_shell("compton &")
@@ -46,7 +59,10 @@ awful.util.spawn_with_shell("compton &")
 -- enable screen lock
 awful.util.spawn_with_shell("xscreensaver -no-splash")
 
--- {{{ Variable definitions
+-------------------------------------------------------------------------------
+-- Variable definitions
+--
+
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(home_directory .. "/.config/awesome/themes/skitoo/theme.lua")
 
@@ -79,20 +95,24 @@ local layouts =
     awful.layout.suit.max.fullscreen,
     awful.layout.suit.magnifier
 }
--- }}}
 
--- {{{ Wallpaper
+
+-------------------------------------------------------------------------------
+-- Wallpaper
 if beautiful.wallpaper then
     for s = 1, screen.count() do
         gears.wallpaper.maximized(beautiful.wallpaper, s, true)
     end
 end
--- }}}
 
--- {{{ Tags
+
+-------------------------------------------------------------------------------
+-- Tags
+--
+
 -- Define a tag table which hold all screen tags.
 tags = {
-  names = { 
+  names = {
     "★ Terminal",
     "☠ Code",
     "❉ Web",
@@ -104,9 +124,12 @@ for s = 1, screen.count() do
     -- Each screen has its own tag table.
     tags[s] = awful.tag(tags.names, s, layouts[1])
 end
--- }}}
 
--- {{{ Menu
+
+-------------------------------------------------------------------------------
+-- Menu
+--
+
 -- Create a laucher widget and a main menu
 web_menu = {
    { "firefox", "firefox" },
@@ -130,14 +153,19 @@ mymainmenu = awful.menu({
   }
 })
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
+mylauncher = awful.widget.launcher({
+  image = beautiful.awesome_icon,
+  menu = mymainmenu
+})
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
--- }}}
 
--- {{{ Wibox
+
+-------------------------------------------------------------------------------
+-- Wibox
+--
+
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
 
@@ -147,13 +175,13 @@ mypromptbox = {}
 mylayoutbox = {}
 mytaglist = {}
 mytaglist.buttons = awful.util.table.join(
-                    awful.button({ }, 1, awful.tag.viewonly),
-                    awful.button({ modkey }, 1, awful.client.movetotag),
-                    awful.button({ }, 3, awful.tag.viewtoggle),
-                    awful.button({ modkey }, 3, awful.client.toggletag),
-                    awful.button({ }, 4, function(t) awful.tag.viewnext(awful.tag.getscreen(t)) end),
-                    awful.button({ }, 5, function(t) awful.tag.viewprev(awful.tag.getscreen(t)) end)
-                    )
+  awful.button({ }, 1, awful.tag.viewonly),
+  awful.button({ modkey }, 1, awful.client.movetotag),
+  awful.button({ }, 3, awful.tag.viewtoggle),
+  awful.button({ modkey }, 3, awful.client.toggletag),
+  awful.button({ }, 4, function(t) awful.tag.viewnext(awful.tag.getscreen(t)) end),
+  awful.button({ }, 5, function(t) awful.tag.viewprev(awful.tag.getscreen(t)) end)
+)
 mytasklist = {}
 mytasklist.buttons = awful.util.table.join(
                      awful.button({ }, 1, function (c)
@@ -233,15 +261,20 @@ for s = 1, screen.count() do
 end
 -- }}}
 
--- {{{ Mouse bindings
+
+-------------------------------------------------------------------------------
+-- Mouse bindings
+--
 root.buttons(awful.util.table.join(
     awful.button({ }, 3, function () mymainmenu:toggle() end),
     awful.button({ }, 4, awful.tag.viewnext),
     awful.button({ }, 5, awful.tag.viewprev)
 ))
--- }}}
 
--- {{{ Key bindings
+
+-------------------------------------------------------------------------------
+-- Key bindings
+--
 globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
@@ -390,11 +423,18 @@ clientbuttons = awful.util.table.join(
     awful.button({ modkey }, 1, awful.mouse.client.move),
     awful.button({ modkey }, 3, awful.mouse.client.resize))
 
--- Set keys
-root.keys(globalkeys)
--- }}}
 
--- {{{ Rules
+-------------------------------------------------------------------------------
+-- Set keys
+--
+root.keys(globalkeys)
+--
+
+
+-------------------------------------------------------------------------------
+-- Rules
+--
+
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
     -- All clients will match this rule.
@@ -417,7 +457,11 @@ awful.rules.rules = {
 }
 -- }}}
 
--- {{{ Signals
+
+-------------------------------------------------------------------------------
+-- Signals
+--
+
 -- Signal function to execute when a new client appears.
 client.connect_signal("manage", function (c, startup)
     -- Enable sloppy focus
@@ -488,4 +532,3 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
--- }}}
