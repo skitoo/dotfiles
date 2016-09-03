@@ -147,7 +147,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
 
 " Nerdtree config
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '.git']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '.git', '__pycache__', 'node_modules']
 let NERDTreeShowHidden = 1
 autocmd StdinReadPre * let s:std_in = 1
 let g:NERDTreeIndicatorMapCustom = {
