@@ -58,6 +58,8 @@ alias tls='tmux ls'
 alias tat='tmux attach -t'
 alias tns='tmux new-session -s'
 
+alias dl-music='youtube-dl -x --audio-format mp3 --audio-quality 0'
+
 # Custom exports
 if [ -f /usr/bin/nvim ]; then
   export EDITOR='/usr/bin/nvim'
