@@ -36,6 +36,7 @@ Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install'}
 Plug 'flowtype/vim-flow', { 'do': 'npm install -g flow-bin'}
+Plug 'rodjek/vim-puppet'
 
 call plug#end()
 
