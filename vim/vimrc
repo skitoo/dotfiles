@@ -148,7 +148,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
 
 " Nerdtree config
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '.git', '__pycache__', 'node_modules']
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '.git', '__pycache__', 'node_modules', 'elm-stuff']
 let NERDTreeShowHidden = 1
 autocmd StdinReadPre * let s:std_in = 1
 let g:NERDTreeIndicatorMapCustom = {
@@ -188,7 +188,7 @@ let g:syntastic_javascript_checkers = ['eslint', 'flow']
 let g:syntastic_javascript_flow_exe = 'flow'
 
 " Ctrlp config
-set wildignore+=*/tmp/*,*/node_modules/*,*/dist/*,*.so,*.swp,*.zip,*.pyc,*.pyo
+set wildignore+=*/tmp/*,*/node_modules/*,*/dist/*,*/elm-stuff/*,*.so,*.swp,*.zip,*.pyc,*.pyo
 
 " Vim-fugitive config
 set statusline+=%{fugitive#statusline()}
@@ -208,6 +208,14 @@ augroup devicons
   autocmd FileType nerdtree setlocal conceallevel=3
   autocmd FileType nerdtree setlocal concealcursor=nvic
 augroup END
+
+" YouCompleteMe
+let g:ycm_semantic_triggers = {
+  \ 'elm' : ['.'],
+  \}
+
+" Elm-vim
+let g:elm_format_autosave = 1
 
 "-------------------------------------------------------------------------------
 " Mapping
