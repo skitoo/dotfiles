@@ -113,11 +113,11 @@ end
 -- Define a tag table which hold all screen tags.
 tags = {
   names = {
-    "★ Terminal",
-    "☠ Code",
-    "❉ Web",
-    "☯ Messaging",
-    "♫ Music"
+    "α :: alpha",
+    "β :: bêta",
+    "γ :: gamma",
+    "δ :: delta",
+    "ε :: epsilon"
   }
 }
 for s = 1, screen.count() do
