@@ -138,6 +138,11 @@ autocmd FileType javascript.jsx setlocal sts=2 sw=2 ts=2
 autocmd FileType python set colorcolumn=81
 autocmd FileType python setlocal sts=4 sw=4 ts=4
 
+" Elm
+autocmd FileType elm set colorcolumn=81
+autocmd FileType elm setlocal sts=4 sw=4 ts=4
+
+
 "-------------------------------------------------------------------------------
 " Pluggins config
 "
