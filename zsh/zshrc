@@ -76,6 +76,8 @@ if [ -f /usr/share/nvm/nvm.sh ]; then
   source /usr/share/nvm/bash_completion
 fi
 
+export ANDROID_HOME=/opt/android-sdk
+
 # Put any proprietary or private functions/values in ~/.private file
 if [ -f $HOME/.private ]; then
   source $HOME/.private
