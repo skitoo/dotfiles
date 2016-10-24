@@ -58,6 +58,7 @@ awful.util.spawn_with_shell("compton &")
 
 -- enable screen lock
 awful.util.spawn_with_shell("xscreensaver -no-splash")
+awful.util.spawn_with_shell("xrandr --output DP1 --auto --right-of eDP1 && xrandr --output DP2 --auto --right-of DP1")
 
 -------------------------------------------------------------------------------
 -- Variable definitions
@@ -345,7 +346,7 @@ globalkeys = awful.util.table.join(
         -- Brightness (apt-get install xbacklight)
     awful.key({ }, "XF86MonBrightnessDown", function () awful.util.spawn("xbacklight -dec 15") end),
     awful.key({ }, "XF86MonBrightnessUp", function () awful.util.spawn("xbacklight -inc 15") end),
- 
+
     -- Screenshot (need scrot package)
     awful.key({ }, "Print", function () awful.util.spawn("scrot -e 'mv $f ~/Pictures/screenshots/ 2>/dev/null'") end),
 
