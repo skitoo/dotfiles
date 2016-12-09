@@ -134,6 +134,7 @@ end
 -- Create a laucher widget and a main menu
 web_menu = {
    { "firefox", "firefox" },
+   { "chromium", "chromium" },
    { "thunderbird", "thunderbird" },
    { "xchat", "xchat" },
    { "slack", "slack" },
