@@ -106,8 +106,9 @@ colorscheme Monokai
 set guifont=DroidSansMonoForPowerline\ Nerd\ Font\ Regular\ 11
 
 " Allow transparency
-hi Normal ctermfg=252 ctermbg=none
-hi NonText ctermfg=59 ctermbg=none
+highlight Normal guibg=none ctermbg=none
+highlight NonText guibg=none ctermbg=none
+highlight SpecialKey guibg=none ctermbg=none
 
 " Turn on file type detection
 filetype plugin indent on
