@@ -1,5 +1,5 @@
 " Vim configuration
-" Author : Alexis Couronne - http://skitoo.net
+" Author : Alexis Couronne - https://www.skitoo.net
 
 "-------------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
