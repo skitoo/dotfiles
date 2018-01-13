@@ -85,3 +85,5 @@ export ANDROID_HOME=/opt/android-sdk
 if [ -f $HOME/.private ]; then
   source $HOME/.private
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
