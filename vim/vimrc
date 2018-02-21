@@ -16,10 +16,8 @@ Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'Raimondi/delimitMate'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'ryanoasis/vim-devicons' " Need https://github.com/ryanoasis/nerd-fonts
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Themes
 Plug 'flazz/vim-colorschemes'
@@ -186,23 +184,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
 
-" Nerdtree config
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '.git', '__pycache__', 'node_modules', 'elm-stuff']
-let NERDTreeShowHidden = 1
-autocmd StdinReadPre * let s:std_in = 1
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 " Nerdcommenter config
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
@@ -235,18 +216,6 @@ set statusline+=%{fugitive#statusline()}
 " Vim-devicons
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let g:DevIconsEnableFoldersOpenClose = 1
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-if exists("g:loaded_webdevicons")
-  call webdevicons#refresh()
-endif
-augroup devicons
-  autocmd!
-  autocmd FileType nerdtree setlocal nolist
-  autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\]" contained conceal containedin=ALL
-  autocmd FileType nerdtree syntax match hideBracketsInNerdTree "\[" contained conceal containedin=ALL
-  autocmd FileType nerdtree setlocal conceallevel=3
-  autocmd FileType nerdtree setlocal concealcursor=nvic
-augroup END
 
 " YouCompleteMe
 let g:ycm_semantic_triggers = {
@@ -281,9 +250,6 @@ nmap <C-q> :bd<CR>
 
 " Toggle Tagbar
 map <F2> :TagbarToggle<CR>
-
-" Toggle NERDTree
-map <F3> :NERDTreeToggle<CR>
 
 " Sort selected lines
 vmap <leader><F5> :sort<CR>
