@@ -48,6 +48,9 @@ call plug#end()
 " General config
 "
 
+" Active mouse
+set mouse=a
+
 " Show the filename in the window titlebar
 set title
 
