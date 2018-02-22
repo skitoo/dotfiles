@@ -57,6 +57,9 @@ set title
 " Enable line numbers
 set number
 
+" Enable relative line numbers
+set relativenumber
+
 " Show the cursor position
 set ruler
 
