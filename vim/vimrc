@@ -114,9 +114,6 @@ set termguicolors
 " Set colorscheme
 colorscheme Monokai
 
-" Set guifont
-set guifont=DroidSansMonoForPowerline\ Nerd\ Font\ Regular\ 11
-
 " Allow transparency
 highlight Normal guibg=none ctermbg=none
 highlight NonText guibg=none ctermbg=none
