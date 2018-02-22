@@ -109,6 +109,8 @@ set clipboard+=unnamedplus
 " Disable folding
 set nofoldenable
 
+set termguicolors
+
 " Set colorscheme
 colorscheme Monokai
 
