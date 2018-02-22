@@ -146,7 +146,7 @@ autocmd FileType vue set colorcolumn=101
 autocmd FileType javascript.jsx setlocal sts=2 sw=2 ts=2
 
 " Python
-autocmd FileType python set colorcolumn=81
+autocmd FileType python set colorcolumn=101
 autocmd FileType python setlocal sts=4 sw=4 ts=4
 
 " Elm
