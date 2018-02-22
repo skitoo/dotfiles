@@ -29,6 +29,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'klen/python-mode'
 Plug 'sirtaj/vim-openscad'
 Plug 'ElmCast/elm-vim'
+Plug 'posva/vim-vue'
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -133,6 +134,7 @@ inoremap <right> <nop>
 
 " Javascript
 autocmd FileType javascript set colorcolumn=101
+autocmd FileType vue set colorcolumn=101
 autocmd FileType javascript.jsx setlocal sts=2 sw=2 ts=2
 
 " Python
@@ -168,7 +170,7 @@ endfunction
 
 " Apply based on filetype
 autocmd BufWritePre *.css,*.scss,*.sass,*.less :call StripTrailingWhitespace()
-autocmd BufWritePre *.js,*.jsx,*.js6,*.es6 :call StripTrailingWhitespace()
+autocmd BufWritePre *.js,*.jsx,*.js6,*.es6,*.ts,*.vue :call StripTrailingWhitespace()
 autocmd BufWritePre *.html,*.xhtml :call StripTrailingWhitespace()
 autocmd BufWritePre *.yml,*.yaml :call StripTrailingWhitespace()
 autocmd BufWritePre *.py :call StripTrailingWhitespace()
