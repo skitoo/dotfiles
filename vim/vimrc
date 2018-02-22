@@ -279,6 +279,11 @@ nmap <leader>h :wincmd h<CR>
 "" Go to the right window
 nmap <leader>l :wincmd l<CR>
 
+"" FZF shortcuts
+nmap <C-p> :Files<CR>
+nmap <C-o> :Buffers<CR>
+nmap <C-c> :Commits<CR>
+
 "" Refactoring mustache JS
 "" Change {a word} to { a word }
 nmap <leader><F8> :%s/{\(\S\(.*\)\S\)}/{ \1 }/gc<CR>
