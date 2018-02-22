@@ -19,6 +19,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'tpope/vim-dispatch'
 Plug 'ryanoasis/vim-devicons' " Need https://github.com/ryanoasis/nerd-fonts
+Plug 'w0rp/ale'
 Plug 'mileszs/ack.vim'
 
 " Themes
@@ -196,18 +197,15 @@ let g:NERDTrimTrailingWhitespace = 1
 " Vim-jsx config
 let g:jsx_ext_required = 0  " enable jsx in .js files
 
-" Syntastic config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_javascript_checkers = ['eslint', 'flow']
-let g:syntastic_javascript_flow_exe = 'flow'
+" ALE config
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] [%severity%] %s'
+let g:airline#extensions#ale#enabled = 1
+let g:ale_open_list = 1
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
 
 " Ctrlp config
 set wildignore+=*/tmp/*,*/node_modules/*,*/dist/*,*/elm-stuff/*,*.so,*.swp,*.zip,*.pyc,*.pyo
