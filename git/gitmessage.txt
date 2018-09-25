@@ -2,4 +2,3 @@
 
 # Co-authored-by: François de Metz <francois@stormz.me>
 # Co-authored-by: Paul Guillemot <paul@stormz.me>
-# Co-authored-by: Idris Serradj <idris@stormz.me>
