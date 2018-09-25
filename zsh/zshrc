@@ -27,7 +27,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}] %{$fg[yellow]%}▼%{$reset_color%}"
 # Shell aliases
 alias reload!='source ~/.zshrc'
 
-alias ls='ls -h --color'
+alias ls='exa --git'
 alias l='ls -la'
 alias ll='ls -l'
 alias la='ls -a'
