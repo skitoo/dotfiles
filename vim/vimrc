@@ -241,6 +241,7 @@ let g:ycm_semantic_triggers = {
 
 " Elm-vim
 let g:elm_format_autosave = 1
+let g:elm_syntastic_show_warnings = 1
 
 " vim-go
 let g:go_highlight_functions = 1
