@@ -304,7 +304,8 @@ nmap <leader>h :wincmd h<CR>
 nmap <leader>l :wincmd l<CR>
 
 "" FZF shortcuts
-nmap <C-p> :Files<CR>
+nmap <C-p> :GFiles<CR>
+nmap <C-i> :Files<CR>
 nmap <C-o> :Buffers<CR>
 nmap <C-c> :Commits<CR>
 
