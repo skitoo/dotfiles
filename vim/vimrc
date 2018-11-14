@@ -267,15 +267,6 @@ endif
 
 let mapleader = ","
 
-" Save current file
-nmap <C-s> :write<CR>
-
-" Close VIM
-nmap <leader>q :quit<CR>
-
-" Close current buffer
-nmap <C-q> :bd<CR>
-
 " Toggle Tagbar
 map <F2> :TagbarToggle<CR>
 
@@ -293,18 +284,6 @@ nmap <leader>n  :bn<CR>
 
 "" Go to left buffers
 nmap <leader>b :bp<CR>
-
-"" Go to the top window
-nmap <leader>k :wincmd k<CR>
-
-"" Go to the bottom window
-nmap <leader>j :wincmd j<CR>
-
-"" Go to the left window
-nmap <leader>h :wincmd h<CR>
-
-"" Go to the right window
-nmap <leader>l :wincmd l<CR>
 
 "" FZF shortcuts
 nmap <C-p> :GFiles<CR>
