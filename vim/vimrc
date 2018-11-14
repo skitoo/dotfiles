@@ -219,6 +219,10 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
 
+" Vue
+let g:vue_disable_pre_processors=1
+autocmd FileType vue syntax sync fromstart
+
 " Ctrlp config
 set wildignore+=*/tmp/*,*/node_modules/*,*/dist/*,*/elm-stuff/*,*.so,*.swp,*.zip,*.pyc,*.pyo
 
