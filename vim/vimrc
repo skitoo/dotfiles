@@ -188,6 +188,7 @@ autocmd BufWritePre *.rst :call StripTrailingWhitespace()
 autocmd BufWritePre *.c,*.cpp,*.java,*.rb,*.go :call StripTrailingWhitespace()
 autocmd BufWritePre *.elm :call StripTrailingWhitespace()
 autocmd BufWritePre *.exs,*.ex,*.eex :call StripTrailingWhitespace()
+autocmd BufWritePre *.rs :call StripTrailingWhitespace()
 
 
 "-------------------------------------------------------------------------------
