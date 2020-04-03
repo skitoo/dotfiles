@@ -4,7 +4,7 @@
 #
 
 # Explicitly configured $PATH variable
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/cargo/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.gem/ruby/2.6.0/bin"
+export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/cargo/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.gem/ruby/2.6.0/bin:$HOME/.npm-global/bin:/snap/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
