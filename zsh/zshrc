@@ -70,6 +70,9 @@ showLog () {
   git log --pretty=format:%s $1..$2 | awk '!/Merge/'
 }
 
+
+eval $(thefuck --alias)
+
 # Custom exports
 if [ -f /usr/bin/nvim ]; then
   export EDITOR='/usr/bin/nvim'
