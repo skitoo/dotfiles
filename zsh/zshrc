@@ -65,6 +65,11 @@ alias git-purge='git branch --merged | grep -v "\*" | grep -v "master" | xargs -
 
 alias remove-orphans-packages='pacman -Rns $(pacman -Qtdq)'
 
+
+showLog () {
+  git log --pretty=format:%s $1..$2 | awk '!/Merge/'
+}
+
 # Custom exports
 if [ -f /usr/bin/nvim ]; then
   export EDITOR='/usr/bin/nvim'
