@@ -8,9 +8,9 @@
 	save = commit -m \"SAVE\"
 	unsave = reset HEAD~1
 [user]
-	email = alexis@stormz.me
+	email = alexis@skitoo.net
 	name = Alexis Couronne
-	signinkey = A2DE3357FCC2D296
+	signingkey = 00118AB47C2EE3CE
 [commit]
 	template = /home/skitoo/.gitmessage.txt
 	gpgsign = true
