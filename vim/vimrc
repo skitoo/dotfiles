@@ -223,7 +223,14 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_open_list = 1
 let g:ale_linters = {
 \   'javascript': ['eslint'],
+\   'python': ['pylint'],
 \}
+let g:ale_fixers = {
+\   'python': ['black'],
+\}
+let g:ale_fix_on_save = 1
+let g:ale_python_auto_pipenv = 1
+let g:ale_python_black_change_directory = 0
 
 " Vue
 let g:vue_disable_pre_processors=1
@@ -285,6 +292,9 @@ autocmd BufNewFile,BufRead *.jst.ejs set syntax=html
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+" python-mode
+let g:pymode_lint_checkers = []
 
 "-------------------------------------------------------------------------------
 " Mapping
