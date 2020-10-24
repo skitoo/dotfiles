@@ -38,7 +38,6 @@ Plug 'leafgarland/typescript-vim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install'}
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
-Plug 'vim-ruby/vim-ruby'
 Plug 'rodjek/vim-puppet'
 Plug 'hashivim/vim-terraform'
 
