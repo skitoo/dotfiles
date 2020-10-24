@@ -13,4 +13,6 @@
   signingkey = 1A32DFE4
 [commit]
 	template = /home/skitoo/.gitmessage.txt
-	gpgsign = true
+  gpgsign = true
+[pull]
+	rebase = false
