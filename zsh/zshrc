@@ -50,7 +50,11 @@ alias du='du -h -c'
 alias vi='nvim'
 alias vim='nvim'
 
-alias top='htop'
+if command -v htop &> /dev/null; then
+  alias top='htop'
+else
+  echo "WARNING: htop is not installed"
+fi
 
 alias docker-clean='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias fig='docker-compose'
