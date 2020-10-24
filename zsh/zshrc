@@ -27,7 +27,12 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}] %{$fg[yellow]%}▼%{$reset_color%}"
 # Shell aliases
 alias reload!='source ~/.zshrc'
 
-alias ls='exa --git'
+if command -v exa &> /dev/null; then
+  alias ls='exa --git'
+else
+  echo "WARNING: exa is not installed"
+fi
+
 alias l='ls -la'
 alias ll='ls -l'
 alias la='ls -a'
