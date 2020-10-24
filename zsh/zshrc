@@ -92,6 +92,12 @@ eval $(thefuck --alias)
 # Custom exports
 if [ -f /usr/bin/nvim ]; then
   export EDITOR='/usr/bin/nvim'
+elif [ -f /snap/bin/nvim ]; then
+  export EDITOR='/snap/bin/nvim'
+elif [ -f /usr/bin/vim ]; then
+  export EDITOR='/usr/bin/vim'
+else
+  export EDITOR='/usr/bin/vi'
 fi
 
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
