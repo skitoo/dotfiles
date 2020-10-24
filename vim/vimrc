@@ -26,7 +26,7 @@ Plug 'mileszs/ack.vim'
 Plug 'flazz/vim-colorschemes'
 
 " Languages
-Plug 'python-mode/python-mode'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'sirtaj/vim-openscad'
 Plug 'ElmCast/elm-vim'
 Plug 'posva/vim-vue'
