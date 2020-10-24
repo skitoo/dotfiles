@@ -32,7 +32,6 @@ Plug 'ElmCast/elm-vim'
 Plug 'posva/vim-vue'
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim'
 Plug 'leafgarland/typescript-vim'
@@ -148,7 +147,6 @@ inoremap <right> <nop>
 " Javascript
 autocmd FileType javascript set colorcolumn=101
 autocmd FileType vue set colorcolumn=101
-autocmd FileType javascript.jsx setlocal sts=2 sw=2 ts=2
 
 " Python
 autocmd FileType python set colorcolumn=101
@@ -174,9 +172,6 @@ let g:NERDCompactSexyComs = 1
 let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
-
-" Vim-jsx config
-let g:jsx_ext_required = 0  " enable jsx in .js files
 
 " ALE config
 let g:ale_echo_msg_error_str = 'E'
