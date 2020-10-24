@@ -45,6 +45,10 @@ Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
+
+" path to python
+let g:python3_host_prog = '/usr/bin/python3.8'
+
 "-------------------------------------------------------------------------------
 " General config
 "
