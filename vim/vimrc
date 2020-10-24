@@ -264,18 +264,8 @@ nmap <leader><F9> :so $MYVIMRC<CR>:AirlineRefresh<CR>
 " Update all plugins
 nmap <leader><F10> :PlugUpdate<CR>
 
-"" Go to right buffers
-nmap <leader>n  :bn<CR>
-
-"" Go to left buffers
-nmap <leader>b :bp<CR>
-
 "" FZF shortcuts
 nmap <C-p> :GFiles<CR>
 nmap <C-i> :Files<CR>
 nmap <C-o> :Buffers<CR>
 nmap <C-c> :Commits<CR>
-
-"" Refactoring mustache JS
-"" Change {a word} to { a word }
-nmap <leader><F8> :%s/{\(\S\(.*\)\S\)}/{ \1 }/gc<CR>
