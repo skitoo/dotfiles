@@ -237,8 +237,6 @@ let g:go_fmt_command = "goimports"
 
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-" backbone template
-autocmd BufNewFile,BufRead *.jst.ejs set syntax=html
 
 " ack-vim
 if executable('ag')
