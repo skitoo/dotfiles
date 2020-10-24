@@ -10,7 +10,9 @@
 [user]
 	email = alexis@skitoo.net
 	name = Alexis Couronne
-	signingkey = 00118AB47C2EE3CE
+  signingkey = 1A32DFE4
 [commit]
 	template = /home/skitoo/.gitmessage.txt
-	gpgsign = true
+  gpgsign = true
+[pull]
+	rebase = false

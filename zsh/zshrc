@@ -4,13 +4,13 @@
 #
 
 # Explicitly configured $PATH variable
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/cargo/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.gem/ruby/2.6.0/bin"
+export PATH="/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$HOME/cargo/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/.yarn/bin:$HOME/.local/bin:$HOME/.gem/ruby/2.6.0/bin:$HOME/.npm-global/bin:/snap/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="cloud"
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -65,6 +65,14 @@ alias git-purge='git branch --merged | grep -v "\*" | grep -v "master" | xargs -
 
 alias remove-orphans-packages='pacman -Rns $(pacman -Qtdq)'
 
+
+showLog () {
+  git log --pretty=format:%s $1..$2 | awk '!/Merge/'
+}
+
+
+eval $(thefuck --alias)
+
 # Custom exports
 if [ -f /usr/bin/nvim ]; then
   export EDITOR='/usr/bin/nvim'
@@ -83,9 +91,14 @@ fi
 
 export ANDROID_HOME=/opt/android-sdk
 
+export GOPATH=$HOME/go
+
 # Put any proprietary or private functions/values in ~/.private file
 if [ -f $HOME/.private ]; then
   source $HOME/.private
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
