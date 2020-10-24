@@ -33,7 +33,7 @@ Plug 'posva/vim-vue'
 Plug 'plasticboy/vim-markdown'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install'}
