@@ -77,7 +77,9 @@ alias dl-music='youtube-dl -x --audio-format mp3 --audio-quality 0'
 
 alias git-purge='git branch --merged | grep -v "\*" | grep -v "master" | xargs -n 1 git branch -d'
 
-alias remove-orphans-packages='pacman -Rns $(pacman -Qtdq)'
+if command -v pacman &> /dev/null; then
+  alias remove-orphans-packages='pacman -Rns $(pacman -Qtdq)'
+fi
 
 
 showLog () {
