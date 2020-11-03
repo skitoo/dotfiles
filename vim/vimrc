@@ -43,7 +43,11 @@ call plug#end()
 
 
 " path to python
-let g:python3_host_prog = '/usr/bin/python3.8'
+if system('uname') =~ 'Darwin'
+  let g:python3_host_prog = '/usr/local/bin/python3'
+else
+  let g:python3_host_prog = '/usr/bin/python3.8'
+end
 
 "-------------------------------------------------------------------------------
 " General config
