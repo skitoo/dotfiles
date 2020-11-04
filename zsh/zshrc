@@ -29,8 +29,10 @@ alias reload!='source ~/.zshrc'
 
 if command -v exa &> /dev/null; then
   alias ls='exa --git'
+  alias tree='ls --tree'
 else
   echo "WARNING: exa is not installed"
+  alias tree='tree -C'
 fi
 
 alias l='ls -la'
@@ -40,8 +42,6 @@ alias la='ls -a'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-
-alias tree='tree -C'
 
 alias grep='grep --color=auto'
 alias df='df -h'
