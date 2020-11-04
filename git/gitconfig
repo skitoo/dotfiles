@@ -4,6 +4,7 @@
 	br = branch
 	st = status
 	fi = commit --fixup
+  cp = cherry-pick
 	as = rebase -i --autosquash
 	save = commit -m \"SAVE\"
 	unsave = reset HEAD~1
