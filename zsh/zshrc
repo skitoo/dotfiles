@@ -114,6 +114,7 @@ fi
 export ANDROID_HOME=/opt/android-sdk
 
 export GOPATH=$HOME/go
+PATH=$PATH:$GOPATH/bin
 
 # Put any proprietary or private functions/values in ~/.private file
 if [ -f $HOME/.private ]; then
