@@ -63,6 +63,8 @@ else
   echo "WARNING: htop is not installed"
 fi
 
+alias gpg-list='gpg --list-secret-keys --keyid-format LONG'
+
 alias docker-clean='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 alias fig='docker-compose'
 
