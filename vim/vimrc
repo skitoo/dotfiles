@@ -16,7 +16,7 @@ Plug 'tpope/vim-surround'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'Raimondi/delimitMate'
-Plug 'ajh17/VimCompletesMe'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-dispatch'
 Plug 'ryanoasis/vim-devicons' " Need https://github.com/ryanoasis/nerd-fonts
 Plug 'w0rp/ale'
